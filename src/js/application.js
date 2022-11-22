@@ -7,12 +7,16 @@ const Isenha = document.querySelector('.senha');
 const Ifone = document.querySelector('.fone');
 
 function cadastrar() {
+   /* End Point, endereço de acesso a API*/
    fetch("http://localhost:888/cadastrar", {
-      headers: {
+      /* Aplicação e conteudo */
+      headers: {    
          'Accept': 'application/json',
          'Content-Type': 'application/json'
       },
-      method: "POST",
+      /* Metodo */
+      method: "POST", 
+      /* Conversor */
       body: JSON.stringify({a: 1, b: 2})
    })
    .then(function (res) {console.log(res)})
