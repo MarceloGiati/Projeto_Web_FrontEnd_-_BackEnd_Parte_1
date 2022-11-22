@@ -17,19 +17,27 @@ function cadastrar() {
       /* Metodo */
       method: "POST", 
       /* Conversor */
-      body: JSON.stringify({a: 1, b: 2})
+      body: JSON.stringify({
+         name: Iname.value,
+         email: Iemail.value,
+         senha: Isenha.value,
+         fone: Ifone.value
+      })
    })
    .then(function (res) {console.log(res)})
    .catch(function (res) {console.log(res)})
 };
 
+function limpar() {
+   name: Iname.value = "";
+   email: Iemail.value = "";
+   senha: Isenha.value = "";
+   fone: Ifone.value = "";
+};
+
 formulario.addEventListener('submit', function (event) {
    event.preventDefault();
-   const dados = {
-      name: Iname.value,
-      email: Iemail.value,
-      senha: Isenha.value,
-      fone: Ifone.value
-   };
 
+   cadastrar();
+   limpar();
 })
