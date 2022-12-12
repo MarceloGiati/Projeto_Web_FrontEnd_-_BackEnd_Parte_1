@@ -28,6 +28,7 @@ function cadastrar() {
    .catch(function (res) {console.log(res)})
 };
 
+/* Limpa cadastro */
 function limpar() {
    name: Iname.value = "";
    email: Iemail.value = "";
